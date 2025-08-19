@@ -24,3 +24,6 @@ for x in code:
     stack.append(stack[-1] + stack[-2])
   elif x == "P" or x == "p":
     print(stack[-1])
+  else:
+    print(f"What is {x}?")
+    break
