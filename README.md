@@ -5,7 +5,7 @@ I: 10
 <br>Z: 20
 <br>E: 30
 <br>A: 40
-,br>S: 50
+<br>S: 50
 <br>G: 60
 <br>T: 70
 <br>O: 80
