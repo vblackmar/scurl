@@ -3,8 +3,10 @@ code = list(yes)
 stack = []
 def stack1():
   return(int(stack[-1]))
+  stack.pop(stack[-1])
 def stack2():
   return(int(stack[-2]))
+  stack.pop(stack[-2])
 for x in code:
   if x == "I" or x == "i":
     stack.append(10)
@@ -25,15 +27,35 @@ for x in code:
   elif x == "N" or x == "n":
     stack.append(90)
   elif x == "+":
-    stack.append(stack2() + stack1())
+    try:
+        stack.append(stack2() + stack1())
+    except IndexError:
+        print("Not enough values on stack")
+        break
   elif x == "-":
-    stack.append(stack2() - stack1())
+    try:
+        stack.append(stack2() - stack1())
+    except IndexError:
+        print("Not enough values on stack")
+        break
   elif x == "*":
-    stack.append(stack2() * stack1())
+    try:
+        stack.append(stack2() * stack1())
+    except IndexError:
+        print("Not enough values on stack")
+        break
   elif x == "/":
-    stack.append(stack2() / stack1())
+    try:
+        stack.append(stack2() / stack1())
+    except IndexError:
+        print("Not enough values on stack")
+        break
   elif x == "P" or x == "p":
-    print(stack1())
+    try:
+        print(stack1())
+    except IndexError:
+        print("No value on stack to be printed")
+        break
   elif x.isspace():
     continue
   elif x.isdigit() and len(x) == 1:
