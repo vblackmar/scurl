@@ -23,4 +23,4 @@ for x in code:
   elif x == "+":
     stack.append(stack[-1] + stack[-2])
   elif x == "P" or x == "p":
-    print(stack[-1]
+    print(stack[-1])
