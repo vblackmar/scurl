@@ -34,6 +34,8 @@ for x in code:
     stack.append(stack2() / stack1())
   elif x == "P" or x == "p":
     print(stack1())
+  elif x.isspace():
+    continue
   elif x.isdigit() and len(x) == 1:
     stack.append(x)
   else:
