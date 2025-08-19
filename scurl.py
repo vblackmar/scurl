@@ -52,6 +52,9 @@ for x in code:
     except IndexError:
         print("Not enough values on stack")
         break
+    except ZeroDivisionError:
+        print("Cannot divide by zero")
+        break
   elif x == "P" or x == "p":
     try:
         print(stack1())
