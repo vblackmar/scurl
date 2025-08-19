@@ -12,7 +12,7 @@ for x in code:
     stack.append(40)
   elif x == "S" or x == "s":
     stack.append(50)
-  elif x == "G" or x == "G":
+  elif x == "G" or x == "g":
     stack.append(60)
   elif x == "T" or x == "t":
     stack.append(70)
