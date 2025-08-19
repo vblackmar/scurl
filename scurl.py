@@ -1,6 +1,10 @@
 yes = input()
 code = list(yes)
 stack = []
+def stack1():
+  return(int(stack[-1]))
+def stack2():
+  return(int(stack[-2]))
 for x in code:
   if x == "I" or x == "i":
     stack.append(10)
@@ -21,9 +25,17 @@ for x in code:
   elif x == "N" or x == "n":
     stack.append(90)
   elif x == "+":
-    stack.append(stack[-1] + stack[-2])
+    stack.append(stack2() + stack1())
+  elif x == "-":
+    stack.append(stack2() - stack1())
+  elif x == "*":
+    stack.append(stack2() * stack1())
+  elif x == "/":
+    stack.append(stack2() / stack1())
   elif x == "P" or x == "p":
-    print(stack[-1])
+    print(stack1())
+  elif x.isdigit() and len(x) == 1:
+    stack.append(x)
   else:
     print(f"What is {x}?")
     break
