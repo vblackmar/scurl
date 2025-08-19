@@ -12,3 +12,15 @@ for x in code:
     stack.append(40)
   elif x == "S" or x == "s":
     stack.append(50)
+  elif x == "G" or x == "G":
+    stack.append(60)
+  elif x == "T" or x == "t":
+    stack.append(70)
+  elif x == "O" or x == "o":
+    stack.append(80)
+  elif x == "N" or x == "n":
+    stack.append(90)
+  elif x == "+":
+    stack.append(stack[-1] + stack[-2])
+  elif x == "P" or x == "p":
+    print(stack[-1]
