@@ -2,11 +2,13 @@ yes = input()
 code = list(yes)
 stack = []
 def stack1():
-  return(int(stack[-1]))
-  stack.pop(stack[-1])
+  stack1 = stack[-1]
+  stack.pop(-1)
+  return(int(stack1))
 def stack2():
-  return(int(stack[-2]))
-  stack.pop(stack[-2])
+  stack2 = stack[-2]
+  stack.pop(-2)
+  return(int(stack2))
 for x in code:
   if x == "I" or x == "i":
     stack.append(10)
